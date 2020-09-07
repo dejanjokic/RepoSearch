@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="8dp">
+
+    <ImageView
+        android:id="@+id/imageViewUserDetailsAvatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/content_description_github_user_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewUserDetailsName"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_person"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/imageViewUserDetailsAvatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/textViewUserDetailsFollowings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_people"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserDetailsName"
+        tools:text="100 followers · 100 following" />
+
+    <TextView
+        android:id="@+id/textViewUserDetailsCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_company"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserDetailsFollowings"
+        tools:text="@tools:sample/cities" />
+
+    <TextView
+        android:id="@+id/textViewUserDetailsLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_location"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserDetailsCompany"
+        tools:text="@tools:sample/cities" />
+
+    <TextView
+        android:id="@+id/textViewUserDetailsDateJoined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="email"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_date"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserDetailsLocation"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+    <TextView
+        android:id="@+id/textViewUserDetailsBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_link"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserDetailsDateJoined"
+        tools:text="https://www.google.com" />
+
+    <TextView
+        android:id="@+id/textViewUserDetailsEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="email"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_email"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserDetailsBlog"
+        tools:text="android@google.com" />
+
+    <TextView
+        android:id="@+id/textViewUserDetailsRepoCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_repo"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserDetailsEmail"
+        tools:text="5 public 5 private repos" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewUserDetailsRepoCount"
+        tools:listitem="@layout/list_item_simple_repo"/>
+
+    <TextView
+        android:id="@+id/textViewUserDetailsStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarUserDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/contentUserDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textViewUserDetailsFollowings,textViewUserDetailsRepoCount,
+        recyclerView,textViewUserDetailsBlog,textViewUserDetailsLocation,textViewUserDetailsCompany,
+        imageViewUserDetailsAvatar,textViewUserDetailsDateJoined,textViewUserDetailsEmail,
+        textViewUserDetailsName"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

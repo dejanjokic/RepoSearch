@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RepoSearch</string>
+
+    <string name="sort">Sort</string>
+    <string name="sort_by">Sort by:</string>
+    <string-array name="repo_sort_order_labels">
+        <item>Stars</item>
+        <item>Forks</item>
+        <item>Updated</item>
+    </string-array>
+
+    <string name="hint_repo_search">Repository search…</string>
+
+    <string name="followers_following_template">%d followers · %d following</string>
+    <string name="public_repos_template">%d public repos</string>
+    <string name="public_private_repos_template">%d public · %d private repos</string>
+    <string name="date_created_template">Created: %s</string>
+    <string name="date_updated_template">Updated: %s</string>
+
+    <string name="open_in_browser">Open in browser</string>
+    <string name="retry">Retry</string>
+
+    <string name="content_description_github_user_avatar">GitHub user avatar</string>
+</resources>

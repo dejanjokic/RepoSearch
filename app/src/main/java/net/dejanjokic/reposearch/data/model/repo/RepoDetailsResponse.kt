@@ -1,0 +1,79 @@
+package net.dejanjokic.reposearch.data.model.repo
+
+import com.squareup.moshi.Json
+
+data class RepoDetailsResponse(
+    @field:Json(name = "archived")
+    val archived: Boolean,
+    @field:Json(name = "created_at")
+    val createdAt: String,
+    @field:Json(name = "default_branch")
+    val defaultBranch: String,
+    @field:Json(name = "description")
+    val description: String,
+    @field:Json(name = "disabled")
+    val disabled: Boolean,
+    @field:Json(name = "fork")
+    val fork: Boolean,
+    @field:Json(name = "forks")
+    val forks: Int,
+    @field:Json(name = "forks_count")
+    val forksCount: Int,
+    @field:Json(name = "full_name")
+    val fullName: String,
+    @field:Json(name = "has_downloads")
+    val hasDownloads: Boolean,
+    @field:Json(name = "has_issues")
+    val hasIssues: Boolean,
+    @field:Json(name = "has_pages")
+    val hasPages: Boolean,
+    @field:Json(name = "has_projects")
+    val hasProjects: Boolean,
+    @field:Json(name = "has_wiki")
+    val hasWiki: Boolean,
+    @field:Json(name = "homepage")
+    val homepage: String,
+    @field:Json(name = "html_url")
+    val htmlUrl: String,
+    @field:Json(name = "id")
+    val id: Int,
+    @field:Json(name = "language")
+    val language: String,
+    @field:Json(name = "name")
+    val name: String,
+    @field:Json(name = "network_count")
+    val networkCount: Int,
+    @field:Json(name = "node_id")
+    val nodeId: String,
+    @field:Json(name = "open_issues")
+    val openIssues: Int,
+    @field:Json(name = "open_issues_count")
+    val openIssuesCount: Int,
+    @field:Json(name = "owner")
+    val owner: Owner,
+    @field:Json(name = "pushed_at")
+    val pushedAt: String,
+    @field:Json(name = "size")
+    val size: Int,
+    @field:Json(name = "stargazers_count")
+    val stargazersCount: Int,
+    @field:Json(name = "subscribers_count")
+    val subscribersCount: Int,
+    @field:Json(name = "updated_at")
+    val updatedAt: String,
+    @field:Json(name = "url")
+    val url: String,
+    @field:Json(name = "watchers")
+    val watchers: Int,
+    @field:Json(name = "watchers_count")
+    val watchersCount: Int
+) {
+    data class Owner(
+        @field:Json(name = "id")
+        val id: Int,
+        @field:Json(name = "login")
+        val login: String,
+        @field:Json(name = "avatar_url")
+        val avatarUrl: String
+    )
+}

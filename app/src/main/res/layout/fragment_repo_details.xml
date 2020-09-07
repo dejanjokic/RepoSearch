@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textViewRepoDetailsFullName"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="flutter/flutter"/>
+
+    <TextView
+        android:id="@+id/textViewRepoDetailsOwner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorAccent"
+        app:drawableStartCompat="@drawable/ic_person"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/textViewRepoDetailsFullName"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@tools:sample/full_names"/>
+
+    <TextView
+        android:id="@+id/textViewRepoDetailsCreatedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_date"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/textViewRepoDetailsOwner"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@tools:sample/date/ddmmyy"/>
+
+    <TextView
+        android:id="@+id/textViewRepoDetailsUpdatedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_date"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/textViewRepoDetailsCreatedDate"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@tools:sample/date/ddmmyy"/>
+
+    <TextView
+        android:id="@+id/textViewRepoDetailsDefaultBranch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_fork"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/textViewRepoDetailsUpdatedDate"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="master"/>
+
+    <TextView
+        android:id="@+id/textViewRepoDetailsLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_code"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/textViewRepoDetailsDefaultBranch"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Kotlin"/>
+
+    <LinearLayout
+        android:id="@+id/layoutRepoDetailsStats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textViewRepoDetailsLanguage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textViewRepoDetailsStars"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/ic_star"
+            app:drawableTint="@color/colorPrimary"
+            tools:text="125"/>
+
+        <TextView
+            android:id="@+id/textViewRepoDetailsWatchers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/ic_eye"
+            app:drawableTint="@color/colorPrimary"
+            tools:text="100"/>
+
+        <TextView
+            android:id="@+id/textViewRepoDetailsForks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/ic_fork"
+            app:drawableTint="@color/colorPrimary"
+            tools:text="50"/>
+
+        <TextView
+            android:id="@+id/textViewRepoDetailsIssues"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:drawablePadding="4dp"
+            app:drawableStartCompat="@drawable/ic_issue"
+            app:drawableTint="@color/colorPrimary"
+            tools:text="5"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewRepoDetailsDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_notes"
+        app:drawableTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/layoutRepoDetailsStats"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Description..."/>
+
+    <TextView
+        android:id="@+id/textViewRepoDetailsStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarRepoDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/contentRepoDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids=",textViewRepoDetailsUpdatedDate,textViewRepoDetailsCreatedDate,
+        textViewRepoDetailsLanguage,textViewRepoDetailsDescription,textViewRepoDetailsFullName,
+        textViewRepoDetailsDefaultBranch,layoutRepoDetailsStats,textViewRepoDetailsOwner"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
